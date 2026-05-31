@@ -7,38 +7,29 @@ public record EnrollmentRecord(
 public class Course
 {
     public required string Code { get; init; }
-
     public required string Title { get; set; }
-
     public int Capacity { get; set; }
-
     public int EnrolledCount { get; set; }
 }
 
 public class Student
 {
     public required string Id { get; init; }
-
     public required string Name { get; set; }
-
     public int Age { get; set; }
-
     public decimal GPA { get; set; }
 }
 
 public interface IGradable
 {
     string Title { get; }
-
     decimal CalculateGrade();
 }
 
 public class Quiz : IGradable
 {
     public required string Title { get; init; }
-
     public required int CorrectAnswers { get; init; }
-
     public required int TotalQuestions { get; init; }
 
     public decimal CalculateGrade()
@@ -53,9 +44,7 @@ public class Quiz : IGradable
 public class LabAssignment : IGradable
 {
     public required string Title { get; init; }
-
     public required decimal FunctionalityScore { get; init; }
-
     public required decimal CodeQualityScore { get; init; }
 
     public decimal CalculateGrade()
