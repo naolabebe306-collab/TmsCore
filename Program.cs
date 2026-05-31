@@ -1,35 +1,18 @@
-﻿#nullable enable
-
-using System;
+﻿using System;
 
 
 
-string? region = null;
+double grantPerStudentLegacy = 1999.99;
+double totalAllocationLegacy = grantPerStudentLegacy * 100_000;
 
-
-string? upperRegion = region?.ToUpper();
-Console.WriteLine($"Region (conditional): {upperRegion}");
-
-
-string displayRegion = region ?? "Unassigned";
-Console.WriteLine($"Region (coalesced): {displayRegion}");
-
-region ??= "Addis Ababa";
-Console.WriteLine($"Region (assigned): {region}");
+Console.WriteLine($"Total allocated (double): {totalAllocationLegacy}");
 
 Console.WriteLine();
 
 
 
-string studentName = "Abeba";
-string studentId = "STU-001";
-int enrollmentCount = 3;
-decimal grantAmount = 1999.99m;
-DateTime enrolledAt = DateTime.UtcNow;
-string? campusRegion = null;
+decimal grantPerStudent = 1999.99m;
+decimal totalAllocation = grantPerStudent * 100_000m;
 
-Console.WriteLine($"Student: {studentName} ({studentId})");
-Console.WriteLine($"Courses: {enrollmentCount}");
-Console.WriteLine($"Grant: {grantAmount:F2}");
-Console.WriteLine($"Enrolled: {enrolledAt:yyyy-MM-dd}");
-Console.WriteLine($"Campus: {campusRegion ?? "Not assigned"}");
+Console.WriteLine($"Total allocated (decimal): {totalAllocation}");
+Console.WriteLine($"Total allocated (formatted): {totalAllocation:F2}");
