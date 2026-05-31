@@ -1,18 +1,14 @@
-﻿using System;
+﻿#nullable enable
 
-
-
-double grantPerStudentLegacy = 1999.99;
-double totalAllocationLegacy = grantPerStudentLegacy * 100_000;
-
-Console.WriteLine($"Total allocated (double): {totalAllocationLegacy}");
+Console.WriteLine("===== Exercise 1 =====");
+Exercise1.Run();
 
 Console.WriteLine();
 
+Console.WriteLine("===== Exercise 2 =====");
+Exercise2.Run();
 
+Console.WriteLine();
 
-decimal grantPerStudent = 1999.99m;
-decimal totalAllocation = grantPerStudent * 100_000m;
-
-Console.WriteLine($"Total allocated (decimal): {totalAllocation}");
-Console.WriteLine($"Total allocated (formatted): {totalAllocation:F2}");
+Console.WriteLine("===== Exercise 3 =====");
+Exercise3.Run();
